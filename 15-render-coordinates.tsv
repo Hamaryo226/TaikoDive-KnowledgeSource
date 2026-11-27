@@ -1,0 +1,490 @@
+根拠	描画対象識別子	描画種類	X	Y	切出X	切出Y	切出幅	切出高さ
+G/src/Common/Chara/Chara.cs:481	textureArray[2]	Draw	動的	141	全体			
+G/src/Common/Chara/Chara.cs:486	textureArray[0]	Draw	動的	140	全体			
+G/src/Common/Chara/Chara.cs:499	textureArray[this.ctAI_Battle_Effect.nValue / 70]	Draw	動的	140	全体			
+G/src/Common/Chara/Chara.cs:608	Program.Tx.txGame_AI_BattleEffect_Landing	Draw	動的	164	全体			
+G/src/Common/Program.cs:488	Program.Tx.txOnline_Mark_Online	Draw	0.0	0.0	全体			
+G/src/Common/Program.cs:490	Program.Tx.txOnline_Mark_Offline	Draw	0.0	0.0	全体			
+G/src/Common/Program.cs:861	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Common/Program.cs:867	Program.txLoadImage	Draw	0.0	0.0	動的/その他			
+G/src/Core/Rendering/Texture.cs:338	this	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:341	txCourseBoxImage	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:360	Program.Tx.txCourseSelect_Main_Panel	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:381	Program.Tx.txCourseSelect_Level_Mark	Draw	動的	691	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:475	Program.Tx.txCourseSelect_TaikoBase	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:489	Program.Tx.txAlert[0]	Draw	0	0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:490	Program.Tx.txAlert[1]	Draw	0	0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:492	Program.Tx.txAlert[2]	Draw	0	790	0	127	1920	60
+G/src/Scenes/CourseSelect/CourseSelect.cs:494	Program.Tx.txAlert[2]	Draw	0	790	0	64	1920	60
+G/src/Scenes/CourseSelect/CourseSelect.cs:548	Program.Tx.txCourseSelect_NoClear	Draw	動的	429	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:551	Program.Tx.txResult_Crown_S	Draw	動的	426	0	0	97	97
+G/src/Scenes/CourseSelect/CourseSelect.cs:554	Program.Tx.txResult_Crown_S	Draw	動的	426	97	0	97	97
+G/src/Scenes/CourseSelect/CourseSelect.cs:557	Program.Tx.txResult_Crown_S	Draw	動的	426	194	0	97	97
+G/src/Scenes/CourseSelect/CourseSelect.cs:574	Program.Tx.txScoreRank	Draw	動的	417	動的/その他			
+G/src/Scenes/CourseSelect/CourseSelect.cs:694	Program.Tx.txCourseSelect_Unfocus	Draw	動的	406	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:761	texture3	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:762	texture1	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:763	texture4	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:764	texture2	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:773	Program.Tx.txCourseSelect_Ura_Panel	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:775	Program.Tx.txCourseSelect_Oni_Panel	Draw	0.0	0.0	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:856	Program.Tx.txCourseSelect_UraOni_Change	Draw	1388	533	動的/その他			
+G/src/Scenes/CourseSelect/CourseSelect.cs:866	Program.Tx.txCourseSelect_UraOni_Change	Draw	1388	533	動的/その他			
+G/src/Scenes/CourseSelect/CourseSelect.cs:870	Program.Tx.txCourseSelect_UraOni_Change_Syuki	Draw	動的	533	動的/その他			
+G/src/Scenes/CourseSelect/CourseSelect.cs:872	Program.Tx.txCourseSelect_UraOni_Change_Syuki	Draw	動的	533	動的/その他			
+G/src/Scenes/CourseSelect/CourseSelect.cs:1523	Program.Tx.txCourseSelect_Back_Light_Back	Draw	動的	309	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:1525	Program.Tx.txCourseSelect_Back_Light	Draw	動的	309	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:1530	Program.Tx.txCourseSelect_Back_Light	Draw	動的	309	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:1536	Program.Tx.txCourseSelect_Back_White_Light	Draw	動的	309	全体			
+G/src/Scenes/CourseSelect/CourseSelect.cs:1544	Program.Tx.txCourseSelect_Small_Back_Light	Draw	動的	380	全体			
+G/src/Scenes/Demo/Demo.cs:117	this.Animation	Draw	0.0	0.0	全体			
+G/src/Scenes/Demo/Demo.cs:132	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/GameMode/AI.cs:619	Program.Tx.txNow_Ward_Panel	Draw	4	82	全体			
+G/src/Scenes/Game/GameMode/AI.cs:643	Program.Tx.txGame_AI_Batch_Anime	Draw	動的	153	動的/その他			
+G/src/Scenes/Game/GameMode/AI.cs:652	txBatchLight	Draw	動的	124	全体			
+G/src/Scenes/Game/GameMode/AI.cs:658	Program.Tx.txGame_AI_Batch_Anime	Draw	動的	153	動的/その他			
+G/src/Scenes/Game/GameMode/AI.cs:665	Program.Tx.txAI_NowTime_G	Draw	308	286	動的/その他			
+G/src/Scenes/Game/GameMode/AI.cs:667	Program.Tx.txAI_NowTime_Y	Draw	308	286	動的/その他			
+G/src/Scenes/Game/GameMode/BatonTouch.cs:68	Program.Tx.txBatonTouch_Cursor	Draw	動的	528	動的/その他			
+G/src/Scenes/Game/GameMode/BatonTouch.cs:83	Program.Tx.txBatonTouch_Cursor	Draw	513	528	動的/その他			
+G/src/Scenes/Game/GameMode/BatonTouch.cs:85	Program.Tx.txBatonTouch_Cursor	Draw	513	528	動的/その他			
+G/src/Scenes/Game/GameMode/BatonTouch.cs:87	Program.Tx.txBatonTouch_CursorWhite	Draw	513	528	0	0	208	250
+G/src/Scenes/Game/GameMode/DanDown.cs:22	Program.Tx.txDan_Back_Down	Draw	0.0	540	全体			
+G/src/Scenes/Game/GameMode/DanDown.cs:35	Program.Tx.txDan_Game_GaugePanel	Draw	動的	171	全体			
+G/src/Scenes/Game/GameMode/DanDown.cs:38	Program.Tx.txDan_Game_Percent	Draw	動的	187	全体			
+G/src/Scenes/Game/GameMode/DanDown.cs:39	Program.Tx.txDan_Game_Range	Draw	動的	185	0	0	80	44
+G/src/Scenes/Game/GameMode/DanDown.cs:52	Program.Tx.txDan_Game_Info	Draw	96	動的	0	0	1650	160
+G/src/Scenes/Game/GameMode/DanDown.cs:57	Program.Tx.txDan_Game_Gauge[0]	Draw	96	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:64	Program.Tx.txDan_Game_Gauge[1]	Draw	512	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:69	Program.Tx.txDan_Game_Gauge[1]	Draw	512	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:71	Program.Tx.txDan_Game_Gauge[1]	Draw	512	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:78	Program.Tx.txDan_Game_Gauge[1]	Draw	512	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:87	Program.Tx.txDan_Game_Gauge[1]	Draw	512	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:92	Program.Tx.txDan_Game_Type	Draw	244	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:96	Program.Tx.txDan_Game_Info	Draw	96	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:98	Program.Tx.txDan_Game_Info	Draw	96	動的	0	160	1650	160
+G/src/Scenes/Game/GameMode/DanDown.cs:104	Program.Tx.txDan_Game_Gauge[2]	Draw	96	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:112	Program.Tx.txDan_Game_Range	Draw	400	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:126	Program.Tx.txDan_Game_Info	Draw	96	動的	0	800	1650	160
+G/src/Scenes/Game/GameMode/DanDown.cs:131	Program.Tx.txDan_Game_Info	Draw	96	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:132	Program.Tx.txDan_Game_Gauge[3]	Draw	1241	動的	全体			
+G/src/Scenes/Game/GameMode/DanDown.cs:134	Program.Tx.txDan_Game_Gauge[4]	Draw	1247	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:136	Program.Tx.txDan_Game_Gauge[4]	Draw	1247	動的	動的/その他			
+G/src/Scenes/Game/GameMode/DanDown.cs:257	Program.Tx.txDan_Game_Info	Draw	96	動的	0	960	1650	80
+G/src/Scenes/Game/GameMode/DanPanel.cs:56	Program.Tx.txDan_Panel	Draw	動的	288	711	0	711	195
+G/src/Scenes/Game/GameMode/DanPanel.cs:57	Program.Tx.txDan_Panel	Draw	動的	288	0	0	711	195
+G/src/Scenes/Game/GameMode/DanUp.cs:20	Program.Tx.txDan_Back_Up	Draw	0.0	0.0	0	0	1920	276
+G/src/Scenes/Game/GameMode/DanUp.cs:22	Program.Tx.txDan_Back_Up	Draw	動的	0.0	0	276	1920	276
+G/src/Scenes/Game/GameMode/DanUp.cs:24	Program.Tx.txDan_Back_Up	Draw	動的	0.0	0	552	1920	276
+G/src/Scenes/Game/GameMode/DanUp.cs:26	Program.Tx.txDan_Back_Up	Draw	動的	0.0	0	828	1920	276
+G/src/Scenes/Game/GameMode/DanUp.cs:28	Program.Tx.txDan_Back_Up	Draw	動的	0.0	0	1104	1920	276
+G/src/Scenes/Game/GameMode/DanUp.cs:35	Program.Tx.txDan_Back_Up	Draw	動的	0.0	0	1380	1920	276
+G/src/Scenes/Game/GameMode/Tokkun.cs:69	Program.Tx.txGame_NowLog	Draw	492	238	全体			
+G/src/Scenes/Game/GameMode/Tokkun.cs:71	Program.Tx.txGame_Base	Draw	0.0	540	全体			
+G/src/Scenes/Game/GameMode/Tokkun.cs:76	Program.Tx.txGame_Taiko	Draw	596	668	0	0	503	611
+G/src/Scenes/Game/GameMode/Tokkun.cs:77	Program.Tx.txGame_Taiko	Draw	1305	668	0	0	503	611
+G/src/Scenes/Game/GameMode/Tokkun.cs:84	Program.Tx.txGame_Taiko	Draw	596	668	動的/その他			
+G/src/Scenes/Game/GameMode/Tokkun.cs:90	Program.Tx.txGame_Playing	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/NotePlay.cs:606	Program.Tx.txResult_Light_Texts	Draw	動的	16	810	0	1110	1080
+G/src/Scenes/Game/NotePlay.cs:621	Program.Tx.txDan_Game_Gauge_Norma	Draw	動的	232	全体			
+G/src/Scenes/Game/NotePlay.cs:677	Program.Tx.txdialog	Draw	455	539	0	0	1008	528
+G/src/Scenes/Game/NotePlay.cs:682	Program.Tx.txSkipnum	Draw	710.0	650.0	250	0	250	315
+G/src/Scenes/Game/NotePlay.cs:683	Program.Tx.txSkipnum	Draw	910.0	650.0	0	0	250	315
+G/src/Scenes/Game/NotePlay.cs:688	Program.Tx.txSkipnum	Draw	830.0	650.0	動的/その他			
+G/src/Scenes/Game/NotePlay.cs:696	Program.Tx.txSkip	Draw	0	0	全体			
+G/src/Scenes/Game/NotePlay.cs:1456	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/NotePlay.cs:1501	txGauge土台	Draw	動的	226	動的/その他			
+G/src/Scenes/Game/Objects/BackUp.cs:406	Program.Tx.txEnso_AI_Back	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:407	Program.Tx.txEnso_AI_Back_R	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:434	Program.Tx.txAI_DOWN_PANEL_FRAME	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:536	this.NormalDownAnime	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:548	Program.Tx.txTOHO_Bg_Down[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:556	Program.Tx.txMIKU_Bg_Down[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:560	Program.Tx.txMIKU_Bg_Down[1]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:578	Program.Tx.txGUMI_Bg_Down[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:610	Program.Tx.txGUMI_Bg_Down[gumiIndex]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:617	Program.Tx.txIA_Bg_Down[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:619	Program.Tx.txIA_Bg_Down_Pen[penFrame]	Draw	-150	820	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:620	Program.Tx.txIA_Bg_Down_Pen[penFrame]	Draw	300	780	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:621	Program.Tx.txIA_Bg_Down_Pen[penFrame]	Draw	720	760	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:622	Program.Tx.txIA_Bg_Down_Pen[penFrame]	Draw	1180	780	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:623	Program.Tx.txIA_Bg_Down_Pen[penFrame]	Draw	1650	820	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:624	Program.Tx.txIA_Bg_Down[1]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:628	Program.Tx.txTOHO_Bg_Down[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:711	Program.Tx.txMIKU_Bg_Up[0]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:748	Program.Tx.txGUMI_Bg_Up[0]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:784	Program.Tx.txIA_Bg_Up[0]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:821	Program.Tx.txTOHO_Bg_Up[0]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:832	Program.Tx.txTOHO_Bg_Up[1]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:833	Program.Tx.txTOHO_Bg_Up[2]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:865	Program.Tx.txTokkun_Back_Up	Draw	0.0	0.0	0	0	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:867	Program.Tx.txTokkun_Back_Up	Draw	動的	0.0	0	276	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:869	Program.Tx.txTokkun_Back_Up	Draw	動的	0.0	0	552	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:871	Program.Tx.txTokkun_Back_Up	Draw	動的	0.0	0	828	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:873	Program.Tx.txTokkun_Back_Up	Draw	動的	0.0	0	1104	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:880	Program.Tx.txTokkun_Back_Up	Draw	動的	0.0	0	1380	1920	276
+G/src/Scenes/Game/Objects/BackUp.cs:902	Program.Tx.txClear_In	Draw	0.0	540	0	0	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:907	Program.Tx.txClear_In	Draw	0.0	動的	0	540	1920	249
+G/src/Scenes/Game/Objects/BackUp.cs:912	Program.Tx.txClear_In	Draw	0.0	動的	0	789	1920	249
+G/src/Scenes/Game/Objects/BackUp.cs:915	Program.Tx.txClear_In	Draw	0.0	動的	0	1038	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:916	Program.Tx.txClear_In	Draw	0.0	動的	0	1578	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:918	Program.Tx.txClear_In	Draw	動的	540	0	2118	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:919	Program.Tx.txClear_In	Draw	動的	540	0	2658	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:921	Program.Tx.txClear_In	Draw	0.0	動的	0	3198	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:923	Program.Tx.txClear_In	Draw	0.0	動的	0	3738	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:924	Program.Tx.txClear_In	Draw	0.0	動的	動的/その他			
+G/src/Scenes/Game/Objects/BackUp.cs:928	Program.Tx.txClear_Daruma[0]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:929	Program.Tx.txClear_Daruma[3]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:947	Program.Tx.txClear_Daruma[2]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:952	Program.Tx.txClear_Daruma[5]	Draw	1305.0	動的	1445	0	471	540
+G/src/Scenes/Game/Objects/BackUp.cs:956	Program.Tx.txClear_Daruma[5]	Draw	1655.0	動的	1916	0	488	540
+G/src/Scenes/Game/Objects/BackUp.cs:960	Program.Tx.txClear_Daruma[5]	Draw	991.0	動的	991	0	454	328
+G/src/Scenes/Game/Objects/BackUp.cs:964	Program.Tx.txClear_Daruma[5]	Draw	394.0	動的	394	0	474	471
+G/src/Scenes/Game/Objects/BackUp.cs:968	Program.Tx.txClear_Daruma[1]	Draw	535.0	動的	535	0	535	617
+G/src/Scenes/Game/Objects/BackUp.cs:972	Program.Tx.txClear_Daruma[1]	Draw	0.0	動的	0	0	535	617
+G/src/Scenes/Game/Objects/BackUp.cs:976	Program.Tx.txClear_Daruma[5]	Draw	0.0	動的	0	0	210	540
+G/src/Scenes/Game/Objects/BackUp.cs:990	Program.Tx.txMIKU_Bg_Down[3]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:991	Program.Tx.txMIKU_Bg_Down[4]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:998	Program.Tx.txIA_Bg_Down[2]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1003	Program.Tx.txTOHO_Bg_Down[1]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1006	Program.Tx.txTOHO_Bg_Down[2]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1025	Program.Tx.txClear_In	Draw	動的	540	0	0	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1026	Program.Tx.txClear_In	Draw	0.0	540	0	540	1920	249
+G/src/Scenes/Game/Objects/BackUp.cs:1027	Program.Tx.txClear_In	Draw	0.0	840	0	789	1920	249
+G/src/Scenes/Game/Objects/BackUp.cs:1029	Program.Tx.txClear_In	Draw	動的	540	0	1038	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1031	Program.Tx.txClear_In	Draw	動的	540	0	1578	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1033	Program.Tx.txClear_In	Draw	動的	540	0	2118	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1035	Program.Tx.txClear_In	Draw	動的	540	0	2658	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1038	Program.Tx.txClear_In	Draw	0.0	動的	0	3198	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1039	Program.Tx.txClear_In	Draw	0.0	動的	0	3738	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1040	Program.Tx.txClear_In	Draw	0.0	動的	0	4278	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1044	Program.Tx.txClear_In	Draw	0.0	動的	0	3198	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1045	Program.Tx.txClear_In	Draw	0.0	動的	0	3738	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1046	Program.Tx.txClear_In	Draw	0.0	動的	0	4278	1920	540
+G/src/Scenes/Game/Objects/BackUp.cs:1051	Program.Tx.txClear_Daruma[0]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1053	Program.Tx.txClear_Daruma[2]	Draw	動的	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1069	Program.Tx.txClear_Daruma[3]	Draw	動的	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1093	Program.Tx.txMIKU_Bg_Down[3]	Draw	動的	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1094	Program.Tx.txMIKU_Bg_Down[4]	Draw	0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1101	Program.Tx.txIA_Bg_Down[2]	Draw	動的	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1105	Program.Tx.txTOHO_Bg_Down[1]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1106	Program.Tx.txTOHO_Bg_Down[2]	Draw	0.0	540	全体			
+G/src/Scenes/Game/Objects/BackUp.cs:1110	Program.Tx.txTOHO_Bg_Down[3]	Draw	0	動的	全体			
+G/src/Scenes/Game/Objects/BackUpAnime.cs:331	listLayer[i]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Balloon.cs:70	Program.Tx.txBalloon	Draw	644	動的	0	2520	390	360
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:66	Program.Tx.txBalloon_Rainbow[2]	Draw	516	動的	動的/その他			
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:68	Program.Tx.txBalloon_Rainbow[3]	Draw	516	動的	0	0	900	500
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:70	Program.Tx.txBalloon_Rainbow[3]	Draw	516	動的	動的/その他			
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:74	Program.Tx.txBalloon_Rainbow[2]	Draw	516	動的	0	0	900	500
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:75	Program.Tx.txBalloon_Rainbow[3]	Draw	516	動的	0	0	900	500
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:103	Program.Tx.txBalloon_Rainbow[0]	Draw	520	動的	動的/その他			
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:105	Program.Tx.txBalloon_Rainbow[1]	Draw	520	動的	0	0	1400	450
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:107	Program.Tx.txBalloon_Rainbow[1]	Draw	520	動的	動的/その他			
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:111	Program.Tx.txBalloon_Rainbow[0]	Draw	520	動的	0	0	1400	450
+G/src/Scenes/Game/Objects/BalloonRainbow.cs:112	Program.Tx.txBalloon_Rainbow[1]	Draw	520	動的	0	0	1400	450
+G/src/Scenes/Game/Objects/Dancer.cs:202	Program.Tx.txBg_Footer[0]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Dancer.cs:206	Program.Tx.txBg_Footer[1]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Dancer.cs:210	Program.Tx.txBg_Footer[2]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Dancer.cs:219	Program.Tx.txBg_Footer[3]	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/FlyNotes.cs:214	Program.Tx.txChipEffect	Draw	1660	動的	動的/その他			
+G/src/Scenes/Game/Objects/GameSkipProcess.cs:26	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/Objects/Gauge.cs:230	Program.Tx.txGauge80	Draw	動的	240	動的/その他			
+G/src/Scenes/Game/Objects/Gauge.cs:250	Program.Tx.txGauge80	Draw	738	動的	動的/その他			
+G/src/Scenes/Game/Objects/Gauge.cs:302	Program.Tx.txClear_Text	Draw	1352	動的	動的/その他			
+G/src/Scenes/Game/Objects/Gauge.cs:312	Program.Tx.txClear_Text	Draw	1457	動的	動的/その他			
+G/src/Scenes/Game/Objects/Gauge.cs:326	Program.Tx.txClear_Text	Draw	1562	動的	動的/その他			
+G/src/Scenes/Game/Objects/Gauge.cs:341	Program.Tx.txSoul	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Gauge.cs:346	Program.Tx.txSoulEffect	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/HitEffect.cs:84	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:86	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:92	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:94	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:100	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:102	Program.Tx.tJudge	Draw	550	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:126	Program.Tx.tHitEffect	Draw	420	動的	動的/その他			
+G/src/Scenes/Game/Objects/HitEffect.cs:142	Program.Tx.tHitFlush	Draw	382	動的	動的/その他			
+G/src/Scenes/Game/Objects/Lane.cs:55	Program.Tx.txDan_Game_Lane_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/Objects/Lane.cs:56	Program.Tx.txLaneBase	Draw	0	0	動的/その他			
+G/src/Scenes/Game/Objects/Lane.cs:59	Program.Tx.txLaneGauge	Draw	0.0	204.0	動的/その他			
+G/src/Scenes/Game/Objects/Lane.cs:64	Program.Tx.txLaneGauge	Draw	0.0	動的	動的/その他			
+G/src/Scenes/Game/Objects/Lane.cs:70	Program.Tx.txLaneAI	Draw	0.0	0.0	全体			
+G/src/Scenes/Game/Objects/Lane.cs:71	Program.Tx.txLaneAI_Base	Draw	0.0	539	全体			
+G/src/Scenes/Game/Objects/Lane.cs:89	Program.Tx.txLane[index2]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:98	Program.Tx.txLaneGoGo	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:101	Program.Tx.txJudgeFrame	Draw	521	287	0	0	195	195
+G/src/Scenes/Game/Objects/Lane.cs:103	Program.Tx.txJudgeFrame	Draw	521	551	0	0	195	195
+G/src/Scenes/Game/Objects/Lane.cs:114	Program.Tx.txBranchBaseLane[(int)eOldBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:116	Program.Tx.txBranchBaseLane[(int)eNextBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:121	Program.Tx.txBranchTextLane[(int)eOldBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:128	Program.Tx.txBranchTextLane[(int)eOldBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:138	Program.Tx.txBranchTextLane[(int)eNextBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:144	Program.Tx.txBranchTextLane[(int)eNextBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Lane.cs:149	Program.Tx.txBranchTextLane[(int)eNextBranch]	Draw	498	動的	全体			
+G/src/Scenes/Game/Objects/Makimono.cs:59	texture2	Draw	438	動的	動的/その他			
+G/src/Scenes/Game/Objects/Makimono.cs:64	texture1	Draw	438	動的	動的/その他			
+G/src/Scenes/Game/Objects/Makimono.cs:73	texture1	Draw	438	動的	動的/その他			
+G/src/Scenes/Game/Objects/Makimono.cs:91	texture1	Draw	438	動的	動的/その他			
+G/src/Scenes/Game/Objects/Makimono.cs:104	texture2	Draw	438	動的	動的/その他			
+G/src/Scenes/Game/Objects/Mob.cs:82	Program.Tx.txMob[0]	Draw	0.0	動的	0	476	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:84	Program.Tx.txMob[0]	Draw	0.0	動的	0	952	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:88	Program.Tx.txMob[0]	Draw	0.0	動的	0	1428	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:90	Program.Tx.txMob[0]	Draw	0.0	動的	0	1904	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:93	Program.Tx.txMob[0]	Draw	0.0	動的	0	2380	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:95	Program.Tx.txMob[0]	Draw	0.0	動的	0	2856	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:97	Program.Tx.txMob[0]	Draw	0.0	動的	0	3332	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:98	Program.Tx.txMob[0]	Draw	0.0	動的	0	0	1920	476
+G/src/Scenes/Game/Objects/Mob.cs:102	Program.Tx.txMob[1]	Draw	0.0	動的	0	1282	1920	239
+G/src/Scenes/Game/Objects/Mob.cs:104	Program.Tx.txMob[1]	Draw	0.0	動的	0	1521	1920	239
+G/src/Scenes/Game/Objects/Mob.cs:107	Program.Tx.txMob[1]	Draw	0.0	動的	0	0	1920	600
+G/src/Scenes/Game/Objects/Mob.cs:109	Program.Tx.txMob[1]	Draw	0.0	動的	0	641	1920	600
+G/src/Scenes/Game/Objects/Mob.cs:119	Program.Tx.txMob_Miku	Draw	0.0	動的	0	0	1920	498
+G/src/Scenes/Game/Objects/Mob.cs:121	Program.Tx.txMob_Miku	Draw	0.0	動的	0	498	1920	498
+G/src/Scenes/Game/Objects/Mob.cs:125	Program.Tx.txMob_Gumi	Draw	0.0	動的	0	0	1920	486
+G/src/Scenes/Game/Objects/Mob.cs:127	Program.Tx.txMob_Gumi	Draw	0.0	動的	0	486	1920	486
+G/src/Scenes/Game/Objects/Mob.cs:131	Program.Tx.txMob_Ia	Draw	0.0	動的	0	0	1920	470
+G/src/Scenes/Game/Objects/Mob.cs:133	Program.Tx.txMob_Ia	Draw	0.0	動的	0	470	1920	470
+G/src/Scenes/Game/Objects/Mob.cs:136	Program.Tx.txMob_Toho	Draw	0.0	動的	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:68	Program.Tx.txMTaiko[2]	Draw	-2	276	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:70	Program.Tx.txGame_Mtaiko	Draw	-2	276	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:75	Program.Tx.txMTaiko[0]	Draw	-2	276	動的/その他			
+G/src/Scenes/Game/Objects/Mtaiko.cs:82	Program.Tx.txGame_LogBase	Draw	-2	276	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:83	Program.Tx.txGame_LogText	Draw	-2	276	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:113	Program.Tx.txTaiko	Draw	316	311	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:116	Program.Tx.txMTaiko_AI	Draw	-2	540	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:119	Program.Tx.txMTaiko[1]	Draw	-2	540	0	0	501	264
+G/src/Scenes/Game/Objects/Mtaiko.cs:120	Program.Tx.txTaiko	Draw	316	動的	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:139	Program.Tx.txTimeGauge[0]	Draw	60.0	528.0	全体			
+G/src/Scenes/Game/Objects/Mtaiko.cs:140	Program.Tx.txTimeGauge[1]	Draw	85.0	528.0	動的/その他			
+G/src/Scenes/Game/Objects/Mtaiko.cs:152	Program.Tx.txMtaikoCourse	Draw	33	346	動的/その他			
+G/src/Scenes/Game/Objects/Mtaiko.cs:155	Program.Tx.txMtaikoCourse	Draw	33	346	600	0	120	100
+G/src/Scenes/Game/Objects/Mtaiko.cs:158	Program.Tx.txMtaikoCourse	Draw	33	640	動的/その他			
+G/src/Scenes/Game/Objects/Mtaiko.cs:500	Program.Tx.txCombo_Text	Draw	356	動的	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:43	Program.Tx.txLoadingSong_AI_Back	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:50	Program.Tx.txLoadingSong_AI_Panel_Effect	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:52	Program.Tx.txLoadingSong_AI_Panel	Draw	動的	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:56	Program.Tx.txLoadingSong_AI_Footer	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:82	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:89	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:94	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:101	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:110	Program.Tx.txDan_Load_Back	Draw	0.0	-108	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:112	.Exam.txPlate	Draw	1548	45	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:117	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:140	Program.Tx.txLoadingSong_Open	Draw	動的	0.0	0	0	960	1080
+G/src/Scenes/LoadingSong/LoadingSong.cs:141	Program.Tx.txLoadingSong_Open	Draw	動的	0.0	960	0	960	1080
+G/src/Scenes/LoadingSong/LoadingSong.cs:144	Program.Tx.txLoadingSong_Wait	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:148	Program.Tx.txLoadingSong_Flash	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:150	Program.Tx.txLoadingSong_Lame	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:157	Program.Tx.txLoadingSong_Skip	Draw	0	0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:163	Program.Tx.txLoadingSong_DonChara	Draw	0.0	動的	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:168	Program.Tx.txLoadingSong_DonChara	Draw	0.0	動的	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:173	Program.Tx.txLoadingSong_Wait	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:175	Program.Tx.txLoadingSong_Flash	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:177	Program.Tx.txLoadingSong_Lame	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:180	Program.Tx.txLoadingSong_BackWhite	Draw	動的	278	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:181	Program.Tx.txLoadingSong_DonChara	Draw	0.0	27.7	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:185	Program.Tx.txLoadingSong_Hint	Draw	0.0	0.0	全体			
+G/src/Scenes/LoadingSong/LoadingSong.cs:210	Program.Tx.txLoadingSong_Skip	Draw	0	0	全体			
+G/src/Scenes/Pause/Pause.cs:122	Program.Tx.txPause_Panel	Draw	0	0	全体			
+G/src/Scenes/Result/DanResult.cs:114	Program.Tx.txDan_Result_MainBack	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:115	Program.Tx.txDan_Result_SongPanel_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:123	.Exam.txPlate	Draw	55	動的	全体			
+G/src/Scenes/Result/DanResult.cs:155	Program.Tx.txDan_Result_StatePanel_Base	Draw	動的	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:159	Program.Tx.txDan_Result_State_Panel	Draw	397	349	0	0	1407	154
+G/src/Scenes/Result/DanResult.cs:160	Program.Tx.txDan_Result_StatePanel_Main	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:161	Program.Tx.txDan_Result_Gauge_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:170	Program.Tx.txDan_Game_Gauge_Norma	Draw	動的	411	全体			
+G/src/Scenes/Result/DanResult.cs:171	Program.Tx.txSoul	Draw	-174	179	全体			
+G/src/Scenes/Result/DanResult.cs:174	Program.Tx.txDan_Result_Percent	Draw	882	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:176	Program.Tx.txDan_Result_Exam_Range	Draw	動的	459	0	0	47	27
+G/src/Scenes/Result/DanResult.cs:177	Program.Tx.txDan_Game_Type	Draw	524	355	動的/その他			
+G/src/Scenes/Result/DanResult.cs:185	Program.Tx.txDan_Result_State_Panel	Draw	397	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:186	Program.Tx.txDan_Game_Type	Draw	524	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:194	Program.Tx.txDan_Game_Gauge[0]	Draw	388	動的	0	0	1650	160
+G/src/Scenes/Result/DanResult.cs:196	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:202	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:204	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:216	Program.Tx.txDan_Game_Gauge[0]	Draw	388	動的	0	0	1650	160
+G/src/Scenes/Result/DanResult.cs:218	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:224	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:226	Program.Tx.txDan_Game_Gauge[1]	Draw	804	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:234	Program.Tx.txDan_Game_Range	Draw	689	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:287	Program.Tx.txDan_Result_StatePanel_Base	Draw	0.0	動的	動的/その他			
+G/src/Scenes/Result/DanResult.cs:332	Program.Tx.txDan_Result_StatePanel_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/DanResult.cs:383	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.AI.cs:91	Program.Tx.txAI_Result_Panel	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.Background.cs:100	Program.Tx.txResult_Back[2]	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.Background.cs:102	Program.Tx.txResult_Back[0]	Draw	0.0	0.0	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:107	Program.Tx.txResult_Back[1]	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.Background.cs:114	Program.Tx.txAI_Result_Back	Draw	0.0	0.0	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:137	Program.Tx.txResult_Mountain[0]	Draw	0.0	0.0	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:162	Program.Tx.txResult_Mountain[1]	Draw	0.0	動的	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:252	Program.Tx.txResult_Cloud	Draw	動的	117	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:254	Program.Tx.txResult_Cloud	Draw	動的	498	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:256	Program.Tx.txResult_Cloud	Draw	動的	762	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:258	Program.Tx.txResult_Cloud	Draw	動的	763	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:260	Program.Tx.txResult_Cloud	Draw	動的	612	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:262	Program.Tx.txResult_Cloud	Draw	動的	763	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:264	Program.Tx.txResult_Cloud	Draw	動的	762	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:266	Program.Tx.txResult_Cloud	Draw	動的	62	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:268	Program.Tx.txResult_Cloud	Draw	動的	-28	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:270	Program.Tx.txResult_Cloud	Draw	動的	-114	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:272	Program.Tx.txResult_Cloud	Draw	動的	315	動的/その他			
+G/src/Scenes/Result/Result.Background.cs:297	Program.Tx.txResult_Cloud	Draw	動的	118	0	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:299	Program.Tx.txResult_Cloud	Draw	動的	498	1200	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:301	Program.Tx.txResult_Cloud	Draw	動的	763	4800	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:303	Program.Tx.txResult_Cloud	Draw	動的	763	12000	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:305	Program.Tx.txResult_Cloud	Draw	動的	611	3600	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:307	Program.Tx.txResult_Cloud	Draw	動的	763	2400	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:309	Program.Tx.txResult_Cloud	Draw	動的	763	6000	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:311	Program.Tx.txResult_Cloud	Draw	動的	-63	7200	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:313	Program.Tx.txResult_Cloud	Draw	動的	-28	9600	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:315	Program.Tx.txResult_Cloud	Draw	動的	-115	8400	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:317	Program.Tx.txResult_Cloud	Draw	動的	315	10800	360	1200	360
+G/src/Scenes/Result/Result.Background.cs:343	txTaikoBase	Draw	動的	0.0	動的/その他			
+G/src/Scenes/Result/Result.Chara.cs:198	Program.Tx.txResult_Flower	Draw	動的	798	動的/その他			
+G/src/Scenes/Result/Result.cs:305	Program.Tx.txResult_Header	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.cs:306	Program.Tx.txResult_Header_Line	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.cs:321	Program.Tx.txResult_Panel	Draw	0.0	0.0	動的/その他			
+G/src/Scenes/Result/Result.cs:322	Program.Tx.txResult_GaugeBack	Draw	動的	209.0	動的/その他			
+G/src/Scenes/Result/Result.cs:334	Program.Tx.txResult_Course_Panel[Program.NotePlay.nNowCourse]	Draw	動的	0.0	全体			
+G/src/Scenes/Result/Result.cs:338	Program.Tx.txResult_Panel	Draw	0.0	0.0	0	0	1920	1080
+G/src/Scenes/Result/Result.cs:339	Program.Tx.txResult_Panel	Draw	0.0	0.0	0	1080	1920	1080
+G/src/Scenes/Result/Result.cs:340	Program.Tx.txResult_GaugeBack	Draw	動的	209.0	動的/その他			
+G/src/Scenes/Result/Result.cs:352	Program.Tx.txResult_Course_Panel[Program.NotePlay.nNowCourse]	Draw	動的	0.0	全体			
+G/src/Scenes/Result/Result.cs:356	Program.Tx.txResult_Course_Panel[Program.NotePlay.nNowCourse2P]	Draw	動的	0.0	全体			
+G/src/Scenes/Result/Result.cs:358	Program.Tx.txResult_GaugeBack	Draw	動的	209.0	動的/その他			
+G/src/Scenes/Result/Result.cs:395	Program.Tx.txResult_Light_Texts	Draw	動的	0.0	810	0	1110	1080
+G/src/Scenes/Result/Result.cs:397	Program.Tx.txResult_Dark_Texts	Draw	動的	0.0	810	0	1110	1080
+G/src/Scenes/Result/Result.cs:404	Program.Tx.txResult_Soul_Effect	Draw	動的	0.0	810	0	1110	1080
+G/src/Scenes/Result/Result.cs:408	Program.Tx.txResult_Light_Texts	Draw	動的	0.0	0	0	810	1080
+G/src/Scenes/Result/Result.cs:410	Program.Tx.txResult_Dark_Texts	Draw	動的	0.0	0	0	810	1080
+G/src/Scenes/Result/Result.cs:431	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.cs:463	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Result/Result.Gauge.cs:44	Program.Tx.txSoulEffect	Draw	-429	67	全体			
+G/src/Scenes/Result/Result.Gauge.cs:57	Program.Tx.txResult_GaugeFrame	Draw	動的	213	動的/その他			
+G/src/Scenes/Result/Result.Rank.cs:53	Program.Tx.txResult_Effect	Draw	動的	512	全体			
+G/src/Scenes/Result/Result.Rank.cs:55	Program.Tx.txResult_Effect	Draw	動的	512	全体			
+G/src/Scenes/Result/Result.Rank.cs:86	Program.Tx.txResult_Effect	Draw	動的	531	全体			
+G/src/Scenes/Result/Result.Rank.cs:88	Program.Tx.txResult_Effect	Draw	動的	531	全体			
+G/src/Scenes/Result/Result.Rank.cs:97	Program.Tx.txScoreRank	Draw	動的	375	動的/その他			
+G/src/Scenes/Result/Result.Rank.cs:98	Program.Tx.txScoreRank	Draw	動的	375	動的/その他			
+G/src/Scenes/SelectSong/DanSelect.cs:264	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:266	Program.Tx.txDan_SelectSong_Select_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:270	Program.Tx.txDan_SelectSong_Select_Button	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:273	Program.Tx.txBarcode_Scan	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:274	Program.Tx.txTimer_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:300	Program.Tx.txDan_SelectSong_Select_Small_Button_Effect	Draw	543	509	0	0	142	142
+G/src/Scenes/SelectSong/DanSelect.cs:302	Program.Tx.txDan_SelectSong_Select_Big_Button_Effect	Draw	動的	514	0	0	340	132
+G/src/Scenes/SelectSong/DanSelect.cs:307	Program.Tx.txDan_SelectSong_Panel	Draw	動的	0.0	動的/その他			
+G/src/Scenes/SelectSong/DanSelect.cs:308	Program.Tx.txDan_SelectSong_Song_Panel	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:309	Program.Tx.txDan_SelectSong_Gauge_Info	Draw	動的	615	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:311	Program.Tx.txDan_SelectSong_Gauge_Info_Range	Draw	動的	669	0	0	84	48
+G/src/Scenes/SelectSong/DanSelect.cs:312	Program.Tx.txDan_SelectSong_Gauge_Info_Percent	Draw	動的	669	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:332	exam.txPlate	Draw	動的	176	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:474	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:475	Program.Tx.txDan_DanIn	Draw	0.0	動的	0	0	960	1080
+G/src/Scenes/SelectSong/DanSelect.cs:476	Program.Tx.txDan_DanIn	Draw	960	動的	960	0	960	1080
+G/src/Scenes/SelectSong/DanSelect.cs:482	Program.Tx.txDan_DanIn	Draw	動的	0.0	0	0	960	1080
+G/src/Scenes/SelectSong/DanSelect.cs:483	Program.Tx.txDan_DanIn	Draw	動的	0.0	960	0	960	1080
+G/src/Scenes/SelectSong/DanSelect.cs:500	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:505	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:595	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:599	Program.Tx.txDan_Load_Back	Draw	0.0	動的	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:601	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/DanSelect.cs:614	.Exam.txPlate	Draw	1548	45	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:67	txWinCount	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:141	Program.Tx.txSelectSong_AI_Back_Gradation	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:142	Program.Tx.txSelectSong_AI_Back	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:164	Program.Tx.txSelectSong_AI_HitLine	Draw	216.5	787.5	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:165	Program.Tx.txSelectSong_AI_HitLine	Draw	216.5	787.5	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:166	Program.Tx.txSelectSong_AI_HitLine	Draw	1701.5	787.5	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:167	Program.Tx.txSelectSong_AI_HitLine	Draw	1701.5	787.5	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:170	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:217	Program.Tx.txSelectSong_AI_HitLine	Draw	960	539	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:237	Program.Tx.txSelectSong_AI_Load_NowLoading_Text	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:242	Program.Tx.txSelectSong_AI_Load_NowLoading_Effect	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:247	Program.Tx.txSelectSong_AI_Load_NowLoading_Bar	Draw	735	573	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:262	Program.Tx.txSelectSong_AI_Load_Stick	Draw	84	動的	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:270	Program.Tx.txSelectSong_AI_Load_LoadFinish_Effect	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:278	Program.Tx.txSelectSong_AI_Load_NowLoading_Effect	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:284	Program.Tx.txSelectSong_AI_Load_LoadFinish_Flash	Draw	0.0	動的	全体			
+G/src/Scenes/SelectSong/SelectSong.AI.cs:286	Program.Tx.txSelectSong_AI_Load_Start_Text	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:69	txBackImage1	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:81	txBackImage2	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:150	Program.Tx.txBarcode_Scan	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:151	Program.Tx.txNowSong_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:164	txKumo	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:167	Program.Tx.txTimer_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:189	Program.Tx.txNowStages	Draw	動的	289	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:209	Program.Tx.txNowStages	Draw	動的	290	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:230	Program.Tx.txTime	Draw	動的	86	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.Background.cs:235	Program.Tx.txTime	Draw	動的	86	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:153	Program.Tx.txLevel_Panel	Draw	動的	0.0	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:184	Program.Tx.txLevel_Panel_Edit	Draw	動的	0.0	動的/その他			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:203	Program.Tx.txSelectSong_Branch	Draw	動的	576	全体			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:235	txCharaImage	Draw	動的	316	0	0	642	422
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:236	txCharaImage	Draw	動的	316	642	0	662	422
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:248	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	0	1920	540
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:249	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	540	1920	540
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:255	Program.Tx.txBarCenterWhiteFrame	Draw	0.0	2	全体			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:261	Program.Tx.txBarCenterWhiteFrame	Draw	0.0	2	全体			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:270	Program.Tx.txBarCenterYellowFrameBack	Draw	0.0	2	全体			
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:273	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	0	1920	540
+G/src/Scenes/SelectSong/SelectSong.BarCenter.cs:274	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	540	1920	540
+G/src/Scenes/SelectSong/SelectSong.Fade.cs:47	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:46	Program.Tx.txLoadingSong_Open	Draw	動的	0.0	0	0	960	1080
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:47	Program.Tx.txLoadingSong_Open	Draw	動的	0.0	960	0	960	1080
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:51	Program.Tx.txLoadingSong_Wait	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:64	Program.Tx.txLoadingSong_Flash	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:66	Program.Tx.txLoadingSong_Lame	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:70	Program.Tx.txLoadingSong_BackWhite	Draw	動的	278	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:74	Program.Tx.txLoadingSong_Skip	Draw	0	0	全体			
+G/src/Scenes/SelectSong/SelectSong.LoadScreen.cs:88	Program.Tx.txLoadingSong_Hint	Draw	0.0	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:64	Program.Tx.txScoreBoard	Draw	動的	0.0	0	0	1920	507
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:66	Program.Tx.txScoreBoard	Draw	動的	0.0	0	0	1920	507
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:73	Program.Tx.txHiScoreBoardAI[1]	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:78	Program.Tx.txHiScoreBoardAI[0]	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:82	Program.Tx.txScoreBoard	Draw	動的	493.0	0	505	1920	507
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:83	Program.Tx.txAINamePlate	Draw	1550	925	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:90	Program.Tx.txAIHeader	Draw	0	0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:400	Program.Tx.txHiScoreBoard_BestReplay	Draw	動的	538.0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:549	Program.Tx.txHiScoreBoard	Draw	動的	0.0	全体			
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:558	Program.Tx.txHSDiff	Draw	動的	606.0	305	0	80	80
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:563	Program.Tx.txHSDiff	Draw	動的	606.0	230	0	80	80
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:569	Program.Tx.txHSDiff	Draw	動的	606.0	230	0	80	80
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:572	Program.Tx.txScoreBoard	Draw	動的	505.0	0	505	1920	507
+G/src/Scenes/SelectSong/SelectSong.ScoreBoard.cs:573	Program.Tx.txCompleteTx	Draw	動的	530	全体			
+G/src/Scenes/Title/Title.cs:557	texture	Draw	0.0	0.0	0	0	800	1080
+G/src/Scenes/Title/Title.cs:559	texture	Draw	800	0.0	800	0	320	1080
+G/src/Scenes/Title/Title.cs:561	texture	Draw	1120	0.0	1120	0	320	1080
+G/src/Scenes/Title/Title.cs:569	Program.Tx.txBlack	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:589	Program.Tx.txEntry_Bana_Loading	Draw	267	動的	全体			
+G/src/Scenes/Title/Title.cs:610	Program.Tx.txEntry_Bana_Loaded	Draw	267	動的	全体			
+G/src/Scenes/Title/Title.cs:807	Program.Tx.txEntry_Back[1]	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:808	Program.Tx.txEntry_Back[2]	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:839	Program.Tx.txEntry_Bar_Coin_Text	Draw	840	468	動的/その他			
+G/src/Scenes/Title/Title.cs:840	Program.Tx.txEntry_Bar_Coin_Text	Draw	840	644	動的/その他			
+G/src/Scenes/Title/Title.cs:925	Program.Tx.txEntry_Select_Base	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:940	Program.Tx.txEntry_Select_Player_Effect	Draw	0.0	0.0	0	0	800	1080
+G/src/Scenes/Title/Title.cs:942	Program.Tx.txEntry_Select_Player_Effect	Draw	800	0.0	800	0	320	1080
+G/src/Scenes/Title/Title.cs:944	Program.Tx.txEntry_Select_Player_Effect	Draw	1120	0.0	1120	0	320	1080
+G/src/Scenes/Title/Title.cs:965	Program.Tx.txEntry_Select_Player	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:1048	Program.Tx.txBarCenterYellowFrameBack	Draw	0.0	動的	全体			
+G/src/Scenes/Title/Title.cs:1051	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	0	1920	540
+G/src/Scenes/Title/Title.cs:1052	Program.Tx.txBarCenterYellowFrame	Draw	0.0	動的	0	540	1920	540
+G/src/Scenes/Title/Title.cs:1058	Program.Tx.txBarCenterWhiteFrame	Draw	0.0	動的	全体			
+G/src/Scenes/Title/Title.cs:1068	.txChara	Draw	動的	0.0	動的/その他			
+G/src/Scenes/Title/Title.cs:1069	.txChara	Draw	動的	0.0	動的/その他			
+G/src/Scenes/Title/Title.cs:1076	.txText	Draw	0.0	動的	全体			
+G/src/Scenes/Title/Title.cs:1077	.txEpText	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:1140	Program.Tx.txOnly1P_Mark	Draw	443	334	全体			
+G/src/Scenes/Title/Title.cs:1151	Program.Tx.txOnly1P_Mark	Draw	443	334	全体			
+G/src/Scenes/Title/Title.cs:1181	Program.Tx.txEntry_Back[3]	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:1184	Program.Tx.txOther	Draw	0.0	0.0	全体			
+G/src/Scenes/Title/Title.cs:1225	Program.Tx.txScoreBoard	Draw	動的	-10	0	0	1920	607
+G/src/Scenes/Title/Title.cs:1226	Program.Tx.txCompleteTx	Draw	動的	520	全体			
+G/src/Scenes/Title/Title.cs:1231	Program.Tx.txScoreBoard	Draw	動的	-10	0	0	1920	607
+G/src/Scenes/Title/Title.cs:1232	Program.Tx.txCompleteTx	Draw	動的	520	全体			
+G/src/Scenes/Title/Title.cs:1251	Program.Tx.txRemnant_Coins	Draw	動的	0.0	全体			
+G/src/Scenes/Title/Title.cs:1261	Program.Tx.txBlack	Draw	0.0	0.0	全体			

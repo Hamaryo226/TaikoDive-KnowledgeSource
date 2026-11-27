@@ -1,0 +1,92 @@
+# 18 物理入力と移植用コード表
+
+| 範囲 | 証拠と確度 |
+|---|---|
+| 対象 | ゲーム fb12417 `src/Core/Input/{KeyInput,KeyCodeLabels,ControllerInput,MouseInput}.cs`、`Scenes/Game/NotePlay.cs`、`Common/Program.cs`；Launcher a1267f0 `Services/{InputLabelService,KeyboardInputMonitor,ControllerInputMonitor,InputBindingsStore,InputBindingsEditor}.cs`、`Pages/InputSettingsPage.xaml.cs`。以下はソースからの確定仕様であり、実機認証ではない。 |
+| 数値 | キー番号は10進の DxLib/DirectInput スキャンコード。OS virtual-key、Unicode文字、画面表示文字とは別の名前空間。 |
+
+## 更新と押下
+
+| 対象 | 確定仕様・証拠 |
+|---|---|
+| キーボード | `KeyInput.Update` は256状態を毎更新取得。成功時、押下中なら各カウンタを1増加、未押下なら0。`IsPush` はカウンタ=1、`IsPushing` は>0。押しっぱなしの edge 再発火はない。配列の判定は各要素の論理和。 |
+| 取得失敗 | コントローラー更新後にキーボード取得が失敗すると、キーカウンタはそのフレーム更新されない。従って直前の1が残ることもある。 |
+| repeat | 共通入力層にOSキーリピートの間隔や周期はない。hold は各フレーム真、edge は初回のみ。呼出元独自の連続操作と混同しない。 |
+| キー取得 | `GetAnyPush` は番号0から255の順に初回edgeを返し、なければ-1。同時の全件列挙ではない。 |
+| Launcher監視 | `KeyboardInputMonitor` は virtual-key 7〜254を昇順走査し、現在の高位bitによる新規押下または低位bitの押下履歴を使う。Escは除外。変換成功した最初の1件を返す。`ResetEdges` は現在値で前状態を初期化。短いタップの履歴bitにはOS依存性がある。 |
+
+## コード・ラベル・OS変換
+
+| 変換 | 確定仕様・証拠 |
+|---|---|
+| 入力イベントから保存値 | `InputLabelService.ToDxLibKeyCode`：Pauseは常に197。scan codeが0なら `MapVirtualKey(vkey, 4)` を用い、下位8bitをscan codeにする。戻り値の上位byteが非零、元のextendedフラグ、またはHome/End/PageUp/PageDown/矢印/Insert/Deleteのvkeyならextended。scan codeが0のままなら変換不能。 |
+| extended | 結果 = `(scan code & 255) OR 128`（extended時）。指定scan codeが非零ならvkeyによるextended補完は行わず、受け取ったフラグを使う。Pauseは例外。 |
+| 表示 | 表の番号は物理キー位置に対する固定ラベルであり、現在のOS配列から得た文字ではない。未知値は `Key(番号)`、空配列は「未設定」、複数は ` / ` で連結。証拠 `KeyCodeLabels.GetLabel/GetLabels`。 |
+
+| 10進コード | 表示ラベル（左から順） |
+|---|---|
+| 1–15 | Esc, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, -, ^, BackSpace, Tab |
+| 16–29 | Q, W, E, R, T, Y, U, I, O, P, @, [, Enter, LCtrl |
+| 30–43 | A, S, D, F, G, H, J, K, L, ;, :, 半角/全角, LShift, ] |
+| 44–58 | Z, X, C, V, B, N, M, comma, period, /, RShift, テンキー*, LAlt, Space, CapsLock |
+| 59–70 | F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, NumLock, ScrollLock |
+| 71–83 | テンキー7, テンキー8, テンキー9, テンキー-, テンキー4, テンキー5, テンキー6, テンキー+, テンキー1, テンキー2, テンキー3, テンキー0, テンキー. |
+| 個別 | 87 F11、88 F12、112 かな、121 変換、123 無変換、125 バックスラッシュ、156 テンキーEnter、157 RCtrl、181 テンキー/、183 PrintScreen、184 RAlt、197 Pause |
+| 個別 | 199 Home、200 ↑、201 PageUp、203 ←、205 →、207 End、208 ↓、209 PageDown、210 Insert、211 Delete、219 LWin、220 RWin、221 Menu。コード51と52の実表示はそれぞれ `,` と `.`。 |
+
+## 固定UIと再割当
+
+| 操作 | 入力と証拠 |
+|---|---|
+| 演奏スロット | `KeyInput.IsPush(config, slot)` はスロットのキーボード群とコントローラー群のedgeのOR。`IsPushing`も同様にholdのOR。片方の再割当で他方は消えない。 |
+| デフォルト | スロット順は縁左、面左、面右、縁右。1Pは `[32] [33,34] [35,36] [37]`、2Pは `[44] [45] [46] [47]`。根拠 `InputBindingsStore.LoadAsync`。 |
+| UI例 | タイトル、選曲、難易度選択などは固定番号32/37や33/36を直接読む箇所がある。設定オーバーレイはEsc 1、上下200/208、左右203/205、Enter 28、Tab 15等。演奏キーを変更してもこれらが自動的に変化するとは限らない。`Title`, `SelectSong.Input`, `CourseSelect`, `SettingsOverlay`。 |
+| クレジット | `Program.tクレジット入力を処理する` は201 PageUpで投入、199 Homeでサービス、209 PageDownで減算。ソースコメントのテンキー説明より数値・ラベルを優先。 |
+
+## コントローラー
+
+| 事項 | 確定仕様・証拠 |
+|---|---|
+| 毎回の再列挙 | `ControllerInput.Update` と `ControllerInputMonitor.Update` は `RawGameControllers` の現在順に状態を同期。消えた参照は除去、新参照は挿入、既存参照は移動する。参照同一性で一時状態を維持。読取例外時は未初期化に戻し次回同期。 |
+| 初期化 | 初回読取成功時は現在ボタン・スイッチを前回へ複写するので、接続時に既に押下中のものはedgeにならない。holdは成立する。 |
+| 入力 | button edgeは現在trueかつ前回false。switch edgeは現在がCenter以外かつ前回と異なる；別方向からの直接遷移もedge。割当switchのholdは現在値の完全一致。indexは0始まり、表示B/Sは1始まり。 |
+| switch値 | 0 Center、1 ↑、2 ↗、3 →、4 ↘、5 ↓、6 ↙、7 ←、8 ↖。斜めは対応する上下左右の同時成立ではなく独立値。 |
+| axis閾値・帰還 | 両実装はaxis配列を読取に渡すが、axisの値をedge/holdや割当に使用しない。よって閾値もヒステリシスも中立復帰条件もこの版には存在しない。軸をボタン化する閾値を推測して実装しない。ドライバが別途button/switchとして露出する場合はその状態に従う。 |
+| 永続identity | `FindMatchingState` はvendorId・productId一致の現在列挙中、同一VID/PIDの0始まりordinalで一致。deviceIndexとdeviceNameは判定に不使用。シリアル等の恒久個体IDではなく、同型機の順序変化・抜差しで割当先が入れ替わり得る。 |
+| 10進ID復元 | Launcher `DeviceId` は `vendorId:productId:deviceOrdinal` の10進文字列。実際の復元は保存された個別数値フィールドからIDを再生成してグループ化し、未接続デバイスも表示する。ID文字列のパーサによる復元は確認できない。16進VID/PID表記をそのまま10進文字列として扱わない。 |
+| 検出順 | `GetAnyPush`/`TryGetPressed` はデバイス列挙順、各デバイスでボタン昇順、次にswitch昇順の最初のedgeだけ返す。 |
+
+## 設定・同時入力
+
+| 事項 | 確定仕様・証拠 |
+|---|---|
+| 保存 | `Setting.json` の `p1Keys` / `p2Keys` 内に `kaLeft`, `donLeft`, `donRight`, `kaRight` の整数配列と、それぞれ末尾に `Controllers` を付けた配列。Controller要素は `vendorId`, `productId`, `deviceIndex`, `deviceOrdinal`, `deviceName`, `inputType`（Button/Switch）, `inputIndex`, `inputValue`。Launcher保存はゲーム実行中拒否、既存ルートを保ちUTF-8で原子的に書く。`InputBindingsStore`。 |
+| 読取 | Launcherではキー配列自体が無ければデフォルト、空配列なら空。0〜255以外を除外。VID/PIDはushort範囲へクランプし、controller配列欠落は空。 |
+| 編集 | `InputBindingsEditor.AssignKeyboard/AssignController` は他プレイヤーで同一入力使用中なら新規割当を拒否。同一プレイヤー内では入力を他スロットから移動し重複を除く。解除は選択プレイヤーのみ。controller同一性はVID/PID/ordinal/type/index/valueであり、表示名とdeviceIndexは含めない。手編集JSON一般の排他保証ではない。 |
+| 1P同時 | `NotePlay` は4スロットそれぞれのedgeを記録する一方、面左右同フレームなら面左優先で面処理1回、縁も左優先で縁処理1回。面と縁は別のifで処理。特訓等の条件分岐は別途適用。 |
+| 2P | 2人モードかつゴースト再生中でない場合に2Pスロットを読む。面左右・縁左右はそれぞれ左優先で1回ずつ。特訓停止中は通常打撃を処理しない。1Pのリプレイ中入力抑止と2Pゴースト条件は同一ではない。 |
+
+## マウス・DPI
+
+| 事項 | 仕様・証拠 |
+|---|---|
+| 位置 | `MouseInput.tTryGetLogicalPoint` は画面座標を `ScreenToClient` でクライアント座標へ変換し、クライアント幅W・高さHに対して `x = trunc(clientX × 1920 / W)`、`y = trunc(clientY × 1080 / H)`。truncは0方向、範囲外をクランプしない。縦横別倍率で、レターボックス補正はない。 |
+| 失敗・ボタン | ハンドルなし、API失敗または幅/高さ≤0なら位置保持・移動量0。ボタンは前回と今回のbit比較でedge/release、holdは現在bit。ホイールは累積をリセットする取得を1フレーム1回。 |
+| DPI | 上式はWindows APIが返す同一座標系の値を前提とする。ゲームのDPI awarenessと複数モニター移動時の仮想化・実寸の互換性はこの章では未確定。テスト補助のDPI設定をゲーム本体の設定と同一視しない。 |
+
+## 受入ケース
+
+| 入力・条件 | 期待結果 |
+|---|---|
+| キーを3更新押し続け解放 | カウンタ1,2,3,0；edgeは1回、holdは3回。 |
+| 33と34を同じ面左へ割当し同時押下 | スロットedgeは真1個であり2打を意味しない。 |
+| 1P面左右と縁左右を同フレーム押下 | 4 edgeを記録し、通常の打撃処理は面左1回＋縁左1回。 |
+| 再割当で1P面を別キーに変更 | 演奏には新キーが効く。固定UIの32/37等は変更されない。 |
+| 接続時からボタン押下 | 初回はedgeなし・hold真。解放して再押下した更新でedge。 |
+| switch ↑から↗へ直接遷移 | ↗のedge成立、↑のholdは不成立。 |
+| 軸だけを動かし戻す | この入力層では割当edgeなし。軸閾値・帰還判定を創作しない。 |
+| 同VID/PID機器2台の順序反転 | ordinalが入れ替わり、物理個体との対応は保持される保証がない。 |
+| 保存値 VID=4660、PID=22136、ordinal=1 | Launcher IDは `4660:22136:1`。保存済み個別フィールドから再生成。 |
+| 通常EnterとテンキーEnter | 28と156として別扱い。Pauseは197。PageUpは201でありテンキー9の73ではない。 |
+| 960×540クライアントの点(480,270) | 論理座標(960,540)。外側の負座標も切捨て方向とクランプなしを検証。 |
+| DPI 100%/150%、モニター間移動 | 表示とヒット座標が一致するか実機検証。未検証を確定扱いしない。 |

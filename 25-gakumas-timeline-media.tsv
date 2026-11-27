@@ -1,0 +1,28 @@
+A2相対パス	種類	幅	高さ	FPS	AUP2開始最小	AUP2終端最大	フレーム数	MP4秒	AUP2資源参照数	AUP2重複なし参照数	音声ストリーム数
+Texture/Enso/Bg_down/GAKUMAS/In/Motion.aup2	AUP2	1920	540	60	0	273	274		1	1	
+Texture/Enso/Bg_down/GAKUMAS/In/Motion.mp4	h264	1920	540	60/1			274	4.566667			0
+Texture/Enso/Bg_down/GAKUMAS/Loop/Motion.aup2	AUP2	1920	540	60	0	212	213		1	1	
+Texture/Enso/Bg_down/GAKUMAS/Loop/Motion.mp4	h264	1920	540	60/1			213	3.550000			0
+Texture/Enso/Bg_down/GAKUMAS/Normal/Motion.aup2	AUP2	1920	540	60	0	177	178		1	1	
+Texture/Enso/Bg_down/GAKUMAS/Normal/Motion.mp4	h264	1920	540	60/1			178	2.966667			0
+Texture/Enso/Bg_down/GAKUMAS/Out/Motion.aup2	AUP2	1920	540	60	0	273	274		1	1	
+Texture/Enso/Bg_down/GAKUMAS/Out/Motion.mp4	h264	1920	540	60/1			274	4.566667			0
+Texture/Enso/Bg_up/GAKUMAS/Decor/00-GradientLight.aup2	AUP2	1920	276	60	0	659	660		2	2	
+Texture/Enso/Bg_up/GAKUMAS/Decor/10-Grid.aup2	AUP2	1920	276	60	0	688	689		7	2	
+Texture/Enso/Bg_up/GAKUMAS/Decor/20-Mascots.aup2	AUP2	1920	276	60	0	689	690		30	2	
+Texture/Enso/Bg_up/GAKUMAS/Decor/Bottle.png	PNG(8bit/色型6)	256	322								
+Texture/Enso/Bg_up/GAKUMAS/Decor/Cool-light.png	PNG(8bit/色型6)	1038	520								
+Texture/Enso/Bg_up/GAKUMAS/Decor/Grid-lines.png	PNG(8bit/色型6)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/Decor/Grid.png	PNG(8bit/色型6)	816	276								
+Texture/Enso/Bg_up/GAKUMAS/Decor/Star.png	PNG(8bit/色型6)	326	358								
+Texture/Enso/Bg_up/GAKUMAS/Decor/Warm-light.png	PNG(8bit/色型6)	1110	504								
+Texture/Enso/Bg_up/GAKUMAS/In/From.png	PNG(8bit/色型2)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/In/Palette.aup2	AUP2	1920	276	60	0	20	21		2	2	
+Texture/Enso/Bg_up/GAKUMAS/In/To.png	PNG(8bit/色型2)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/Loop/Palette.aup2	AUP2	1920	276	60	0	1	2		1	1	
+Texture/Enso/Bg_up/GAKUMAS/Loop/Palette.png	PNG(8bit/色型2)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/Normal/Palette.aup2	AUP2	1920	276	60	0	1	2		1	1	
+Texture/Enso/Bg_up/GAKUMAS/Normal/Palette.png	PNG(8bit/色型2)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/Out/From.png	PNG(8bit/色型2)	1920	276								
+Texture/Enso/Bg_up/GAKUMAS/Out/Palette.aup2	AUP2	1920	276	60	0	20	21		2	2	
+Texture/Enso/Bg_up/GAKUMAS/Out/To.png	PNG(8bit/色型2)	1920	276								
