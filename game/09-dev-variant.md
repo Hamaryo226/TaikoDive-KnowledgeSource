@@ -2,7 +2,7 @@
 
 ## DEV-01 範囲と証拠
 
-本章はゲーム main `fb12417`、開発版 `ff729c1`、Launcher main `a1267f0` の比較に限る。開発版の仕様を main の仕様に混ぜない。`D/` は入力 `dev/`、`G/` は入力 `game/`、`L/` は入力 `launcher/` の相対パスであり、いずれも実行時パスではない。`dev-v-main.txt` はこの二つのゲーム入力のファイル差分である。過去の `D/docs/experimental-vs-main.md` は別の古いコミット間の記録であり、今回 main が開発版の部分集合である根拠にしてはならない。
+本章はゲーム main `fb12417` と開発版 `ff729c1` の比較に限る。開発版の仕様を main の仕様に混ぜない。`D/` は入力 `dev/`、`G/` は入力 `game/` の相対パスであり、いずれも実行時パスではない。`dev-v-main.txt` はこの二つのゲーム入力のファイル差分である。過去の `D/docs/experimental-vs-main.md` は別の古いコミット間の記録であり、今回 main が開発版の部分集合である根拠にしてはならない。
 
 本章の実行時パスは原則ゲーム実行ルートからの相対パス。2026年11月27日時点のソースと文書を静的に読んだ記述であり、ビルド、DxLib描画、音声、OBS、実機操作や性能は検証していない。作業ツリーの状態は観測時点のもので、入力スナップショットとは別である。
 
@@ -63,14 +63,12 @@ F4 → システム → カスタム段位ビルダーで曲を3つ、順序、�
 
 ## DEV-09 現行未コミット作業ツリー：スナップショットとは別
 
-以下は ローカルの GitHub 作業フォルダーにあった3作業ツリーについて、観測時の `git status --short` と一部差分・未追跡文書を読んだ結果。各作業ツリーの HEAD と上記固定コミットの同一性は検証していない。未追跡ファイルは通常の `git diff --stat` に含まれない。以下を DEV-02〜08 の確定コミット差分へ上書きしてはならない。
+以下はゲーム本体のローカル作業ツリーについて、観測時の `git status --short` と一部差分・未追跡文書を読んだ結果。各作業ツリーの HEAD と上記固定コミットの同一性は検証していない。未追跡ファイルは通常の `git diff --stat` に含まれない。以下を DEV-02〜08 の確定コミット差分へ上書きしてはならない。
 
 | 作業ツリー | 観測した差分 |
 | --- | --- |
 | TaikoDive | 追跡済み変更は `src/Core/Rendering/AnimationTexture.cs` と `src/Scenes/Demo/Demo.cs`。未追跡に `docs/demo-song-showcase.md`、`src/Common/Song/DemoSongGenre.cs`、`DemoSongPlaylist.cs`、`DemoSongPreviewFade.cs`、`DemoSongTemplate.cs`、`src/Scenes/Demo/DemoSongArtwork.cs`、`DemoSongShowcase.cs`、`tests/TaikoDive.Tests/Tests/紹介曲Tests.cs`。紹介枠1〜13、main曲と自動／手動サブ4曲、13枠への繰り返し、紹介音声の0.5秒フェードを文書化。`Info/TaikoDiveLauncher/demo-songs.json` は version 2、enabled、entries の mainSong・autoSubSongs・subSongs、Songs相対パス。旧 version 1 は読込み移行し保存時に version 2 化。音源不足等は当該枠を飛ばし、全枠無効や非対応形式等では標準紹介へ戻す。ゲーム実行と外観は未検証。 |
-| TaikoDive-Launcher | 追跡済み27ファイルに変更・削除。ホーム、入力・起動・楽曲画面、保存サービス、README、テスト、スモークツール等を変更し、旧入力デバイス画像2枚・そのREADME・`Pages/HomePage.Cards.cs` を削除。未追跡には紹介曲画面・モデル・保存サービス・テスト、演奏活動画面・モデル・サービス・テスト、コントローラー描画、プレビュー画像と文書がある。紹介設定はゲーム側と共有しゲーム実行中の保存拒否、保存時 `.launcher.bak`、未保存移動の確認を記載。演奏活動集計コードはローカル日付換算で365日・月曜始まり53週を生成する。その他の詳細な振る舞いは未検証。 |
-| TaikoDive-Launcher-Recovery | `Pages/LauncherSettingsPage.Recovery.cs`、`Pages/LauncherSettingsPage.xaml`、`Tests/LauncherRecoveryUiTests.cs` を変更。差分では設定の再読込・退避して初期化のボタン処理を削除し、保護中の案内文を変更している。保存保護全体が削除されたとは限らない。 |
 
 ## DEV-10 検証境界
 
-根拠は各記載の `D/`、`G/`、`L/`、入力差分一覧と作業ツリーの読み取り。テストファイルの存在はテスト成功を意味しない。本補遺ではゲーム・ランチャー・OBS の起動、永続化の実書込み、ネットワーク、2P、画像・音声・パフォーマンスの実測は行っていない。Windows、日本語コードページ、DxLib、使用可能な素材・譜面やユーザーデータに依存する箇所は対象環境で別途確認すること。
+根拠は各記載の `D/`、`G/`、入力差分一覧と作業ツリーの読み取り。テストファイルの存在はテスト成功を意味しない。本補遺ではゲーム・OBS の起動、永続化の実書込み、ネットワーク、2P、画像・音声・パフォーマンスの実測は行っていない。Windows、日本語コードページ、DxLib、使用可能な素材・譜面やユーザーデータに依存する箇所は対象環境で別途確認すること。

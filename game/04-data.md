@@ -1,6 +1,6 @@
 # 04｜設定とデータ交換の基本契約
 
-対象は固定コミット G `fb12417`、L `a1267f0`。この章は共有形式の入口。ファイルごとの検証・型・変換・書込み順は [リプレイとユーザー](04b-replay-users.md)、[曲カタログ](04c-song-catalog.md)、[設定と原子置換](04d-settings-and-atomic.md) を併用する。競合時は具体的な補足を優先する。
+対象は固定コミット G `fb12417` と、ゲームが読み書きする公開データ契約。ファイルごとの検証・型・変換・書込み順は [リプレイとユーザー](04b-replay-users.md)、[曲カタログ](04c-song-catalog.md)、[設定と原子置換](04d-settings-and-atomic.md) を併用する。外部の読み書き境界は [連携契約](../INTEROP.md)。
 
 ## DATA-01 設定の形式と既定値
 
@@ -31,7 +31,7 @@
 
 `bTwoPlayerMode` はゲーム内部の別名で JSON には書かない。キーオブジェクトの `kaLeft`, `donLeft`, `donRight`, `kaRight` は整数配列。1P の既定は順に `[32]`, `[33,34]`, `[35,36]`, `[37]`、2P は `[44]`, `[45]`, `[46]`, `[47]`。対応する `kaLeftControllers`, `donLeftControllers`, `donRightControllers`, `kaRightControllers` は各々空配列。要素は `vendorId`, `productId`（ushort）、`deviceIndex`, `deviceOrdinal`, `inputIndex`（int、既定0）、`deviceName`（文字列、既定空）、`inputType`（Button または Switch、既定 Button）、`inputValue`（int、既定1）。VID/PID と同型機器内順で共有する。根拠: `G/src/Common/Config/ConfigInI.cs::KeyBindConfig,ControllerInputBinding`。
 
-Launcher は設定保存前にゲーム実行中なら拒否する。既存 JSON をオブジェクトとして読んで対象キーのみ更新し、それ以外は保持するが、廃止済み `charaAnimationFrameSkip` と `reduceCharaTextureColorTo16bit` は大小文字無視で削除する。音量を 0–100、保存幅を 640–7680、バッファを 0 または 32–8192 に制限し、`fullHD` は幅が1920以上かで更新する。ゲーム側の許容値と Launcher の保存制限を混同しない。JSON が不正・非オブジェクトなら保存失敗。根拠: `L/Services/GameSettingsStore.cs::LoadAsync,SaveAsync`。
+外部エディタの書込み制限は [Launcher の設定編集](../launcher/04-data-editor.md)。本体の許容範囲と外部エディタの保存時制限を同一視しない。
 
 ## DATA-02 スコアとパス
 
@@ -66,24 +66,22 @@ Launcher リプレイ起動引数は `--launcher-replay <path> --user-slot <1..9
 
 ## DATA-05 曲ライブラリ・順序・最近の曲
 
-Launcher の曲順ファイルは各ジャンル直下 `.taikodive-order`。UTF-8 BOM なし、ジャンルからの相対 TJA パスを `/` 区切りで1行ずつ。読み込みは大小文字を区別せず初出を採用、未指定曲は列挙順を維持して末尾。保存はゲーム実行中に拒否し、ジャンルが現在の Songs 直下であること、指定集合に重複がなく現在の再帰列挙集合と一致することを確認する。書込みは原子的置換とバックアップを使う。根拠: `L/Services/SongOrderService.cs::LoadSongs,SaveOrderAsync,SaveOrderWithoutProcessCheckAsync`。
-
-Launcher ライブラリ走査は `.tja` を大小文字無視で列挙し、タイトルの文化依存・大小文字無視順にする。ファイルサイズ 8 MiB 超は問題として扱う。UTF-8 厳格デコードを試し失敗時 CP932、BOM は除去。コメント `//` を除いたヘッダから TITLE、WAVE、SUBTITLE、GENRE、DEMOSTART を読み、WAVE が Songs 外なら拒否、無いファイルを警告する。GENRE 未指定なら祖先の `box.def` から `#GENRE:` を探す。これと曲順編集時のタイトル抽出は別実装で、後者は先頭512行・1行16 Ki文字まで、`TITLEJA` 優先、`#START` で終了する。根拠: `L/Services/SongLibraryService.cs::ScanAsync,ReadChart,ReadFolderGenre`、`L/Services/SongOrderService.cs::ReadTitle,ReadHeaderLine`。
+曲順ファイル `.taikodive-order` の本体での読み込みは [曲カタログ](04c-song-catalog.md)、作成と更新の条件は [Launcher の曲データ編集](../launcher/04-data-editor.md)。
 
 最近の曲は最大30件、新しいものが先。存在しない・移動した譜面は表示時に飛ばし、現在の曲とパスを大小文字無視で照合する。根拠: `G/src/Common/Song/RecentSongs.cs::tLoad,tBuild`。
 
 ## DATA-06 保存と競合
 
-ゲームの一般 JSON と成績は `AtomicFile` を使う。Launcher 設定は既存 JSON に部分更新して保存し、ゲーム起動中の同時書換えを拒否する。Launcher のブリッジ用出力は同ディレクトリに GUID 付き一時ファイルを書いて上書き移動し、一時ファイルを finally で削除する。原子的置換は複数プロセス間の read-modify-write の排他そのものではない。バックアップ世代や障害時は [04d](04d-settings-and-atomic.md)。根拠: `G/src/Common/Config/ConfigManager.cs::SaveConfig`、`G/src/Common/Score/ScoreDat.cs::tWriteDatFile`、`G/src/Common/LauncherBridge.cs::WriteAtomic`、`L/Services/GameSettingsStore.cs::SaveAsync`。
+本体の一般 JSON と成績は `AtomicFile` を使う。本体の外部連携用出力は同ディレクトリに GUID 付き一時ファイルを書いて上書き移動し、一時ファイルを finally で削除する。原子的置換は複数プロセス間の read-modify-write 排他ではない。詳細は [原子置換](04d-settings-and-atomic.md)。根拠：`G/src/Common/Config/ConfigManager.cs::SaveConfig`、`G/src/Common/Score/ScoreDat.cs::tWriteDatFile`、`G/src/Common/LauncherBridge.cs::WriteAtomic`。
 
 ## DATA-07 確認テストと残作業
 
 次を実データを使わない一時ディレクトリ上で確認する。現時点では実行していない。
 
-1. 空設定の生成、未知キーを持つ設定のゲーム保存と Launcher 保存、壊れた JSON、ゲーム実行中の保存拒否を比較する。
+1. 空設定の生成、未知キーを持つ設定の本体保存、壊れた JSON を比較する。外部エディタとの比較は [連携契約](../INTEROP.md)。
 2. 譜面の相対・外部パス、異なる大文字小文字、同名曲、禁止文字を含むユーザー名について曲キーと移行元の残存を確認する。
 3. 新記録・同点・低得点でスコア内訳と王冠が独立して更新されること、AI自己ベストと勝利数が混ざらないことを確認する。
 4. version 2 の装飾フィールド欠落、譜面変更、別スロット、32 MiB 超のリプレイ、および再生中断後の設定復元を確認する。
-5. 並べ替えファイルの重複、欠落、曲追加、ゲーム実行中の拒否、UTF-8/CP932 譜面、履歴重複を確認する。
+5. 並べ替えファイルの重複、欠落、曲追加、UTF-8/CP932 譜面、履歴の重複記録を確認する。
 
 別OSでのファイルシステム、旧データの全組合せ、複数の書込み競合や異常終了後の復旧は [08](08-conformance.md) と [14](14-coverage.md) に従い検証する。

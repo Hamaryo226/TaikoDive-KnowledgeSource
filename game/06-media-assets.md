@@ -1,6 +1,6 @@
 # 06 描画・音響・素材・3D互換仕様
 
-入力は game `fb12417`、launcher `a1267f0`、assets `7c5bb71` の固定スナップショット。`G/` は game、`L/` は launcher のルートを表し、`::` の右は根拠シンボル。[媒体詳細](06b-media-details.md)、[GLB とテーマ](06c-glb-and-themes.md) を併用する。画像・音声・GLB の内容そのものは別途必要である。実物がなければ画素・音色・モデル形状の同一性は検証できない。本章は画面遷移・判定の仕様を定めない。
+入力はゲーム G `fb12417` と Assets A `7c5bb71` の固定スナップショット。`G/` は本体ソースのルートを表し、`::` の右は根拠シンボル。[媒体詳細](06b-media-details.md)、[GLB とテーマ](06c-glb-and-themes.md) を併用する。画像・音声・GLB の内容そのものは別途必要である。実物がなければ画素・音色・モデル形状の同一性は検証できない。本章は画面遷移・判定の仕様を定めない。
 
 ## MEDIA-01 座標・画像・所有権
 
@@ -24,7 +24,7 @@ UTF-8、BOM可。空行と行頭 `;` は無視し、`[section]` と最初の `=`
 | 反転 | 上下反転、左右反転 | 輝度・色相・透明度反転は非対応 |
 | 拡大率 | 拡大率、X、Y | いずれも既定100 |
 
-パラメータは数値列と移動種別を扱い、直線、瞬間移動、加減速移動を区別する。合成モードは通常、加算、減算、乗算。未認識キーや効果を対応済みと偽らない。ランチャーの `L/Services/Aup2Animation.cs::Load` はプレビュー用の別実装であり、ゲーム側の動画・音声やグループ制御まで同一とは限らない。`Texture/Common/Control_Guide/Normal`／`XS` の In→Loop、両方なければ Anime 優先・名前順先頭をループ。欠けた場合の静止絵への復帰は呼び出し側が行う。`Texture/Enso/Don/light.aup2` と `kirakira.aup2` は全画面座標で、無ければ描かない。根拠：`G/src/Common/左上太鼓描画.cs::tDrawXS`、`G/src/Common/Chara/MaxEffectAnime.cs`。
+パラメータは数値列と移動種別を扱い、直線、瞬間移動、加減速移動を区別する。合成モードは通常、加算、減算、乗算。未認識キーや効果を対応済みと偽らない。[Launcher のプレビュー](../launcher/06b-media-preview.md)は別実装であり、本体の動画・音声やグループ制御を代替しない。`Texture/Common/Control_Guide/Normal`／`XS` の In→Loop、両方なければ Anime 優先・名前順先頭をループ。欠けた場合の静止絵への復帰は呼び出し側が行う。`Texture/Enso/Don/light.aup2` と `kirakira.aup2` は全画面座標で、無ければ描かない。根拠：`G/src/Common/左上太鼓描画.cs::tDrawXS`、`G/src/Common/Chara/MaxEffectAnime.cs`。
 
 **受入 MEDIA-02**：中間キーフレーム・3補間・各合成・動画/音声開始位置を含む実素材でフレーム比較する。未知キーが落下せず無視され、欠落画像を含む全体時間が変わらないことを確認する。
 
@@ -48,13 +48,13 @@ UTF-8、BOM可。空行と行頭 `;` は無視し、`[section]` と最初の `=`
 
 `Info/CharaPath.ini` は既定表を先に読み、同名キーをINIで上書きする。`|` は候補優先順、最初の実在ディレクトリ／ファイルを選び、全欠落なら左端の候補を返す。先頭 `/` または `\` はルートからの相対として扱い、その他はキャラルートとの結合。キーは大小文字を区別しない。未登録キーはキー名そのもの。`Chara_Root` は既定 `Info/Chara/<Type>`、`Chara_AI_Root` は `Info/Chara/AIDON`。`Chara_Config` は `Config.json|Enso/Config.json`、`Chara_ConfigIni` は `Enso/CharaConfig.ini|CharaConfig.ini`。モーションキーと候補は `G/src/Common/Chara/CharaPath.cs::str既定の対応表` を正とする。
 
-選択したぷちは `Texture/PetitChara/<ID>.png`、ID 0 または未配置なら標準シート。`Info/Chara3D.json` の `users.<番号>.petitCharaId` → ルート → 旧設定の順。個別画像は同時2種類まで。取り込み済みの個別素材は透過512×256、256×256の2コマ横並び、1コマ素材は同じ画像を両コマに置く。BPMによる切替と跳躍は既存描画に従う。根拠：`G/src/Common/Chara/PetitCharaSettings.cs::Resolve`、`G/docs/3d-character.md`、`L/Services/Character3DStore.cs::GetPetitCharaOptions`。
+選択したぷちは `Texture/PetitChara/<ID>.png`、ID 0 または未配置なら標準シート。`Info/Chara3D.json` の `users.<番号>.petitCharaId` → ルート → 旧設定の順。個別画像は同時2種類まで。取り込み済みの個別素材は透過512×256、256×256の2コマ横並び、1コマ素材は同じ画像を両コマに置く。BPMによる切替と跳躍は既存描画に従う。根拠：`G/src/Common/Chara/PetitCharaSettings.cs::Resolve`、`G/docs/3d-character.md`。
 
 **受入 MEDIA-05**：候補を順番に欠落させた場合の解決、ユーザー別・共通・旧設定の優先順、未知IDの標準復帰、2コマ切替を確認する。
 
 ## MEDIA-06 GLB・着せ替え・モーション
 
-プレイヤー共通キャラは3D専用で、AIドン・ぷち・背景・連打効果は独立。`Info/Chara3D.json` の `modelsPath` は build からの相対パス、旧 `enabled` は読み込み条件ではない。必須構成は `animations.glb`、`body/0.glb`、`head/0.glb`、`face/face_000000.png`、任意で `face/animations.json`。モデル・必要なクリップが不足した場合に自動取得せず、エラーを明示する。`parts` の `useCostume`、`head`、`body`、`costume`、`colors` の `body`、`limbs`、`face`、`rim` を読み、色は `#RRGGBB`。全身衣装は頭と胴の組を置き換えるが両選択値を保持。`users` の項目単位で共通に上書きし、同時にユーザーモデルを最大2つ保持する。根拠：`G/docs/3d-character.md`、`G/src/Common/Chara/Model3D/DonModelAppearance.cs`、`L/Services/Character3DStore.cs`。
+プレイヤー共通キャラは3D専用で、AIドン・ぷち・背景・連打効果は独立。`Info/Chara3D.json` の `modelsPath` は build からの相対パス、旧 `enabled` は読み込み条件ではない。必須構成は `animations.glb`、`body/0.glb`、`head/0.glb`、`face/face_000000.png`、任意で `face/animations.json`。モデル・必要なクリップが不足した場合に自動取得せず、エラーを明示する。`parts` の `useCostume`、`head`、`body`、`costume`、`colors` の `body`、`limbs`、`face`、`rim` を読み、色は `#RRGGBB`。全身衣装は頭と胴の組を置き換えるが両選択値を保持。`users` の項目単位で共通に上書きし、同時にユーザーモデルを最大2つ保持する。根拠：`G/docs/3d-character.md`、`G/src/Common/Chara/Model3D/DonModelAppearance.cs`。
 
 GLB 2.0 [1] のすべてを実装する要求ではない。原作の読込範囲は埋め込みバッファ、スキニング、LINEAR／STEPの位置・回転・スケール。モデル側とアニメ側の骨名を対応付け、追加衣装骨は静止姿勢で親骨に追従する。特殊シェーダーや揺れ物物理は再現対象外。範囲外は明示的エラーとする。1280×720 の共有モデル描画先・縁取り描画先に CPU で姿勢を計算し、全外形6px、手足等の内部境界約1.7pxを深度判定付きで描く。パレットは点サンプリング。根拠：`G/src/Common/Chara/Model3D/GlbDocument.cs`、`DonModelData.cs`、`DonModelRenderer.cs`、`G/docs/3d-character.md`。
 

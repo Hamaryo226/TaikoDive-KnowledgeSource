@@ -13,17 +13,16 @@
 | `soundBufferSamples` | 0以下を自動0、正値は32〜8192。UI は1刻みだが 0 を増やすと32、32 を減らすと0。表示概算 ms は `samples×1000/48000` 小数1桁。実際のサンプルレートは機器が決める |
 | `backgroundMovieLayoutMode` | `FullScreen` / `BlurredWithInset` の二択 |
 
-ランチャーの標準幅も上記5種、読み込んだ幅が該当しなければ「カスタム」をリスト先頭へ加える。出力方式4種、映像切替2種。ランチャー楽曲の ZIP 取込はファイルエントリ 10000 件以下、宣言展開総サイズ 4 GiB 以下、転送時も当該エントリの長さを越える読み込みにしない。この数値は更新パッケージや TJA 本文の上限に流用しない。根拠：`G/src/Common/Config/ConfigManager.cs`、`G/src/Common/Config/ScreenResolutions.cs`、`G/src/Common/Config/SoundOutput.cs`、`G/src/Core/Util/FrameLimiter.cs`、`L/Pages/LaunchSettingsPage.xaml.cs` 10–25/138–146、`L/Services/SongImportService.cs` 17–18/67/141–174。
+根拠：`G/src/Common/Config/ConfigManager.cs`、`G/src/Common/Config/ScreenResolutions.cs`、`G/src/Common/Config/SoundOutput.cs`、`G/src/Core/Util/FrameLimiter.cs`。外部設定エディタの選択肢・ZIP取込上限は [Launcher](../launcher/04-data-editor.md) の仕様。
 
 ## DATA-D02 競合・バックアップ
 
 | 実装元 | 一時ファイルと置換の契約 |
 |---|---|
 | ゲーム汎用 JSON と曲スコア | 同フォルダーの `.元ファイル名.<GUIDのN表記>.tmp` を排他的に新規作成。読み取り専用の既存先は事前拒否。エンコードした全内容を flush し、可能な範囲でディスクに flush。既存なら置換して `元パス.bak` に直前内容、新規なら移動するだけ。Unix で新規一時ファイルは所有者のみ読み書き、既存を置き換える時は元の permission を継承。失敗しても既存先を削除してやり直さない。最後に自分の一時ファイルだけ除去し、副次 I/O 失敗は隠す |
-| ランチャーの汎用ファイル | 親を作り `元パス.launcher.tmp` に全内容を書き、既存でバックアップ指定（既定真）なら `元パス.launcher.bak` へコピー上書き。最後に、一時ファイルを元パスへ上書き移動。コピー/移動の失敗では一時ファイル削除を試みて例外を再送。書込み自体が try より前なので、書込み時の失敗では残渣があり得る |
 | ゲームのランチャー用履歴 | 規定 record に対し同フォルダーの GUID 一時パスから移動。対象ディレクトリは非同期予約時に確定。設定やスコアとバックアップ方式を混同しない |
 
-ランチャーの通常設定保存はインストール先ごとではない。`TaikoDive` 名のプロセスのうちランチャー自身が追跡するプレビュー以外が一つでもあれば保存拒否する。設定に対する未知キー保持と `.launcher.bak` 読み戻しを確認する。ゲーム側の `.bak`/ランチャー側の `.launcher.bak` それぞれ一世代で、一定時間の自動競合解決・同時書込の保証はない。根拠：`G/src/Core/Util/AtomicFile.cs` 10–60、`G/src/Common/LauncherBridge.cs`、`L/Services/FilePersistence.cs` 7–38、`L/Services/GameProcessService.cs` 9–22、`L/Services/GameSettingsStore.cs` 60–65。
+ゲーム側の `.bak` は直前の一世代であり、一定時間の自動競合解決や他プロセスとの同時書込みを保証しない。根拠：`G/src/Core/Util/AtomicFile.cs` 10–60、`G/src/Common/LauncherBridge.cs`。別プロセスによる共有設定の保存は [連携契約](../INTEROP.md)。
 
 ## DATA-D03 Score.dat 書き出しのバイト編成
 

@@ -1,6 +1,6 @@
 # 04b リプレイ・ユーザーデータ互換補遺
 
-調査対象は game / launcher のスナップショット。以下は実装で確認できた挙動であり、バイナリ形式を仮定しない。
+調査対象はゲーム本体の固定版 G。以下は実装で確認できた挙動であり、バイナリ形式を仮定しない。
 
 ## リプレイの永続データ
 
@@ -36,9 +36,9 @@
 
 `Info/User.ini` の `1P_User_`〜`9P_User_` をユーザー番号に対応させる。各接頭辞のキーは `NamePlateType`（int、既定 0）、`Name`（既定「どんちゃん」）、`Title`（既定「ドンだーデビュー」）、`CharaType`（文字列、既定 `0`）。ファイル欠如や個別項目欠落でも既定値で文字画像を生成する。パーサーは UTF-16 LE/BE BOM、UTF-8 BOM を検出し、それ以外は Shift_JIS として読むため、BOM なし UTF-8 を互換扱いしない。行頭 `;` をコメントとし、`=` 分割の最初の値だけを使いキーと値を trim、キーは大文字小文字を区別する。整数不正は `int.Parse` で例外になり得る。名前は表示だけでなくスコア・リプレイ保存先の識別子なので、変更で別データになる可能性がある。
 
-ランチャーは既存の文字コードと改行を保持し、未知キー・コメントを残して選択スロットの4項目を更新、直前のファイルを `.launcher.bak` に保存する。新規ファイルは BOM 付き UTF-8。ゲーム実行中は保存拒否。名前とキャラは空不可、称号は空可、改行と `=` は不可、プレート番号は0以上にする。ランチャーの読み取りはキー大小無視、`#` コメントも認識し、最初の `=` より後すべてを値とするため、ゲーム側とは厳密には一致しない。既存のキー表記を保持する更新方法なので小文字キーを自動的にゲーム互換に正規化する保証はない。
+別プロセスの書込みと文字コード保持は [Launcher のプロフィール編集](../launcher/04-data-editor.md)。本体と Launcher でキーの解釈が異なる点に注意する。
 
-出典: `game/src/Common/NamePlate/NamePlateParse.cs`, `game/src/Common/Score/ScorePath.cs`, `launcher/Services/UserProfileStore.cs`, `launcher/Services/FilePersistence.cs`。
+出典: `game/src/Common/NamePlate/NamePlateParse.cs`, `game/src/Common/Score/ScorePath.cs`。
 
 ## 段位履歴
 
@@ -59,6 +59,6 @@ More は実績 >= 閾値、Less は実績 < 閾値で合格。全課題とゲー
 
 リプレイは `ConfigManager` により UTF-8 JSON、インデント付き、フィールド名 camelCase、enum は文字列として保存する（上記表は実装型の識別子で、実際の JSON キーは例えば `songPath`, `chartHash`）。JSON をバイナリ形式と解釈しない。`RecordedAtUtc` は記録開始時の UTC 日時。
 
-競合時は具体的な補足を優先する。ポーズの終了操作は [01](01-game-scenes.md) と [17](17-gameplay-effects.md)、ランチャーの履歴画面は [05](05-launcher.md) と [20](20-ui-persistence-details.md)、ゲーム設定の `Setting.ini` 非移行とバックアップは [04d](04d-settings-and-atomic.md)。形式や字幕の古い非公開版を含むすべての INI 形式を互換対象に追加するものではない。
+競合時は具体的な補足を優先する。ポーズの終了操作は [01](01-game-scenes.md) と [17](17-gameplay-effects.md)、ランチャーの履歴画面は [05](../launcher/05-launcher.md) と [20](../launcher/20-ui-persistence-details.md)、ゲーム設定の `Setting.ini` 非移行とバックアップは [04d](04d-settings-and-atomic.md)。形式や字幕の古い非公開版を含むすべての INI 形式を互換対象に追加するものではない。
 
 出典: `game/src/Common/Config/ConfigManager.cs`, `game/src/Scenes/Game/NotePlay.cs`, `game/src/Common/Replay/ReplayManager.cs`, `game/src/Common/Program.cs`。
